@@ -22,3 +22,14 @@ def calc_pressure_loss(re, channel_length, char_length,fluid_density,
     pressure_loss = float(pressure_loss) * int(number_of_channels)
 
     return pressure_loss
+
+
+def calc_faradaic_stoichiometry(z, F, molar_mass, density, current, flowrate):
+    molar_volume = molar_mass / density
+    print('molar_volume_methanol ' + str(molar_volume) + ' m3/mol')
+
+    faradaic_mass_flow = ((1/(z * F)) * molar_volume * current)
+    stoichiometry = (flowrate * molar_mass ) / faradaic_mass_flow
+
+    return faradaic_mass_flow, stoichiometry
+
