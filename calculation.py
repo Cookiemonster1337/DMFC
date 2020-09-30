@@ -11,7 +11,7 @@ def calc_reynolds_number(fluid_density_anode, fluid_velocity_anode,
     return re_anode
 
 # pressure_loss along all channels (anode)
-def calc_pressure_loss(re, channel_length, char_length,fluid_density,
+def calc_pressure_loss(re, channel_length, char_length, fluid_density,
                        fluid_velocity, number_of_channels):
 
     drag_coefficient_channel = 64 / re
