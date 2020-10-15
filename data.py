@@ -202,19 +202,19 @@ def convert_data(cell_temperature_anode, molarity, flowrate_anode,
     result['stoichiometry_anode'] = [stoichiometry_anode, '']
     print('stoichiometry_anode ' + str(stoichiometry_anode))
 
-    result_key = ''
-    result_value = ''
-    result_unit = ''
-    for key, value_list in result.items():
-        result_key += key + ': \n'
-        print(value_list)
-        result_value += str(round(value_list[0],4)) + '\n'
-        result_unit += str(value_list[1]) + '\n'
+        result_key = ''
+        result_value = ''
+        result_unit = ''
+        for key, value_list in result.items():
+            result_key += key + ': \n'
+            print(value_list)
+            result_value += str(round(value_list[0],4)) + '\n'
+            result_unit += str(value_list[1]) + '\n'
 
 
-    output_key.set(result_key)
-    output_value.set(result_value)
-    output_unit.set(result_unit)
+        output_key.set(result_key)
+        output_value.set(result_value)
+        output_unit.set(result_unit)
 
     #presssure_loss over channel height
 
